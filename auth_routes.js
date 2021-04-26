@@ -4,13 +4,6 @@ const db = require("./db_petition");
 const { requireLoggedOutUser } = require("./middleware");
 const { compare } = require("bcryptjs");
 
-let secret;
-if (process.env.SECRET) {
-	secret = process.env.SECRET;
-} else {
-	secret = require("./secret.json").secret;
-}
-
 // router.use(requireLoggedOutUser);
 router.get("/", (req, res) => {
 	res.redirect("/register"), console.log(req.session.userId);
@@ -97,8 +90,7 @@ router.post("/login", (req, res) => {
 							login: true,
 							csrfToken: req.csrfToken(),
 							error: true,
-							message:
-								"(T⌓T)  Login Error! Please try again  (T⌓T)",
+							message: "Login Error! Please try again",
 						});
 					} else {
 						req.session.userId = rows[0].id;

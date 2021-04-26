@@ -10,22 +10,7 @@ exports.requireLoggedInUser = (req, res, next) => {
 exports.requireLoggedOutUser = (req, res, next) => {
 	if (req.session.userId) {
 		// goes to signature to sign
-		return res.redirect(302, "/signature");
-	}
-	next();
-};
-
-//users with
-exports.requireNoSignature = (req, res, next) => {
-	if (req.session.signatureId) {
-		return res.redirect(302, "/signed");
-	}
-	next();
-};
-
-exports.requireSignature = (req, res, next) => {
-	if (!req.session.signatureId) {
-		return res.redirect(302, "/signature");
+		return res.send(302, "/signature");
 	}
 	next();
 };
