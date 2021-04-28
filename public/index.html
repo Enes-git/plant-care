@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Plant Care</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <header></header>
+        <div id="main">
+            <div id="uploader">
+                <form>
+                    <input
+                        v-model="name"
+                        type="text"
+                        name="name"
+                        placeholder="plant name"
+                    />
+                    <input
+                        v-model="description"
+                        type="text"
+                        name="description"
+                        placeholder="description"
+                    />
+                    <input type="file" name="file" accept="image/*" />
+                    <button @click="handleClick">Upload</button>
+                </form>
+            </div>
+            <div class="plants-container grid">
+                <div class="all-plants" v-for="image in images" :key="image">
+                    <a href=""></a>
+                </div>
+            </div>
+        </div>
+        <footer></footer>
+        <script src="/js/vue.js"></script>
+        <script src="/js/axios.min.js"></script>
+        <script src="/js/script.js"></script>
+    </body>
+</html>
+
+<!-- <form id="uploadForm" action="">
+                    <input
+                        v-model="name"
+                        type="text"
+                        name="name"
+                        placeholder="plant name"
+                    />
+                    <input
+                        v-model="description"
+                        type="text"
+                        name="description"
+                        placeholder="description"
+                    />
+                    <input
+                        @change="handleChange"
+                        type="file"
+                        name="file"
+                        accept="image/*"
+                    />
+                    <button id="uploadButton" @click.prevent="handleClick">
+                        UPLOAD
+                    </button>
+                </form> -->
