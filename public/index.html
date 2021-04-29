@@ -10,27 +10,33 @@
     <body>
         <header></header>
         <div id="main">
-            <div id="uploader">
-                <form>
-                    <input
-                        v-model="name"
-                        type="text"
-                        name="name"
-                        placeholder="plant name"
-                    />
-                    <input
-                        v-model="description"
-                        type="text"
-                        name="description"
-                        placeholder="description"
-                    />
-                    <input type="file" name="file" accept="image/*" />
-                    <button @click="handleClick">Upload</button>
-                </form>
-            </div>
-            <div class="plants-container grid">
-                <div class="all-plants" v-for="image in images" :key="image">
-                    <a href=""></a>
+            <div id="my-plants-container">
+                <div id="uploader">
+                    <form>
+                        <input
+                            v-model="name"
+                            type="text"
+                            name="name"
+                            placeholder="plant name"
+                        />
+                        <input
+                            v-model="description"
+                            type="text"
+                            name="description"
+                            placeholder="description"
+                        />
+                        <input type="file" name="file" accept="image/*" />
+                        <button @click="handleClick">Upload</button>
+                    </form>
+                </div>
+                <div class="my-plants grid">
+                    <div
+                        class="all-plants"
+                        v-for="image in images"
+                        :key="image"
+                    >
+                        <a href=""></a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -40,27 +46,3 @@
         <script src="/js/script.js"></script>
     </body>
 </html>
-
-<!-- <form id="uploadForm" action="">
-                    <input
-                        v-model="name"
-                        type="text"
-                        name="name"
-                        placeholder="plant name"
-                    />
-                    <input
-                        v-model="description"
-                        type="text"
-                        name="description"
-                        placeholder="description"
-                    />
-                    <input
-                        @change="handleChange"
-                        type="file"
-                        name="file"
-                        accept="image/*"
-                    />
-                    <button id="uploadButton" @click.prevent="handleClick">
-                        UPLOAD
-                    </button>
-                </form> -->
