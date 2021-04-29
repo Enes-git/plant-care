@@ -1,51 +1,48 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<link rel="stylesheet" href="/style.css" />
-		<title>Plant-Care</title>
-	</head>
-	<body>
-		<div id="main-container">
-			<div id="registration-container" v-if="cookie">
-				<form id="login">
-					<input
-						v-model="username"
-						type="text"
-						name="username"
-						placeholder="Username"
-					/>
-					<input
-						v-model="password"
-						type="password"
-						name="password"
-						placeholder="password"
-					/>
-					<button @click="handleLoginClick">Login</button>
-					<!-- Below button is only PSEUDO atm -->
-					<button @click="handleLoginClick">Forgot Login?</button>
-				</form>
-			</div>
-			<div id="registration-container" v-else>
-				<form id="registration">
-					<input
-						v-model="username"
-						type="text"
-						name="username"
-						placeholder="Username"
-					/>
-					<input
-						v-model="email"
-						type="text"
-						name="email"
-						placeholder="email address"
-					/>
-					<input v-model="password" type="password" name="password" />
-					<button @click="handleRegisterClick">Register</button>
-				</form>
-			</div>
-		</div>
-		<script src="/js/vue.js"></script>
-		<script src="/js/axios.min.js"></script>
-		<script src="/js/script.js"></script>
-	</body>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Plant Care</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <header></header>
+        <div id="main">
+            <div id="my-plants-container">
+                <div id="uploader">
+                    <form>
+                        <input
+                            v-model="name"
+                            type="text"
+                            name="name"
+                            placeholder="plant name"
+                        />
+                        <input
+                            v-model="description"
+                            type="text"
+                            name="description"
+                            placeholder="description"
+                        />
+                        <input type="file" name="file" accept="image/*" />
+                        <button @click="handleClick">Upload</button>
+                    </form>
+                </div>
+                <div class="my-plants grid">
+                    <div
+                        class="all-plants"
+                        v-for="image in images"
+                        :key="image"
+                    >
+                        <a href=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer></footer>
+        <script src="/js/vue.js"></script>
+        <script src="/js/axios.min.js"></script>
+        <script src="/js/script.js"></script>
+    </body>
 </html>
