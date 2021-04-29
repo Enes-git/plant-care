@@ -10,6 +10,7 @@ new Vue({
         watering: '',
         fertilization: '',
         url: '',
+        cookie: false,
     },
 
     mounted: function () {

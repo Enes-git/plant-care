@@ -9,7 +9,50 @@
     </head>
     <body>
         <header></header>
-        <div id="main">
+        <div id="main-container">
+            <div id="auth-container">
+                <div id="login-container" v-if="cookie">
+                    <form id="login">
+                        <input
+                            v-model="username"
+                            type="text"
+                            name="username"
+                            placeholder="Username"
+                        />
+                        <input
+                            v-model="password"
+                            type="password"
+                            name="password"
+                            placeholder="password"
+                        />
+                        <button @click="handleLoginClick">Login</button>
+                        <!-- Below button is only PSEUDO atm -->
+                        <button @click="handleLoginClick">Forgot Login?</button>
+                    </form>
+                </div>
+                <div id="registration-container" v-else>
+                    <form id="registration">
+                        <input
+                            v-model="username"
+                            type="text"
+                            name="username"
+                            placeholder="Username"
+                        />
+                        <input
+                            v-model="email"
+                            type="text"
+                            name="email"
+                            placeholder="email address"
+                        />
+                        <input
+                            v-model="password"
+                            type="password"
+                            name="password"
+                        />
+                        <button @click="handleRegisterClick">Register</button>
+                    </form>
+                </div>
+            </div>
             <div id="my-plants-container">
                 <div id="uploader">
                     <form>
