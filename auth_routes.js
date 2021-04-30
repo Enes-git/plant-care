@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const db = require("./db_petition");
+const db = require("./db_plant-care");
 const { requireLoggedOutUser } = require("./middleware");
 const { compare } = require("bcryptjs");
 

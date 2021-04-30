@@ -1,0 +1,154 @@
+{
+	"plants": [
+		{
+			"name": "succulent",
+			"water_min": 10,
+			"water_max": 15,
+			"notes": [
+				"Soak the soil until water runs out of the drainage holes.",
+				"Let the soil dry between waterings."
+			],
+			"toxic": false
+		},
+		{
+			"name": "rubber plant",
+			"water_min": 5,
+			"water_max": 10,
+			"notes": [
+				"Plant should not be in the direct path of an air conditioner.",
+				"Let the soil dry completely between waterings."
+			],
+			"toxic": true
+		},
+		{
+			"name": "peace lily",
+			"water_min": 5,
+			"water_max": 10,
+			"notes": [
+				"Avoid direct sunlight.",
+				"Soil must be kept moist but not soggy."
+			],
+			"toxic": true
+		},
+		{
+			"name": "parlor palm",
+			"water_min": 5,
+			"water_max": 10,
+			"notes": [
+				"Avoid direct sunlight.",
+				"Wash in the sink every few weeks to keep the foliage clean and pest free."
+			],
+			"toxic": true
+		},
+		{
+			"name": "fiddle leaf fig",
+			"water_min": 5,
+			"water_max": 10,
+			"notes": [
+				"Cut back a few leaves every once in awhile to encourage growth.",
+				"Let the soil dry between waterings."
+			],
+			"toxic": true
+		},
+		{
+			"name": "peperomia",
+			"water_min": 5,
+			"water_max": 10,
+			"notes": [
+				"Cut back a few leaves every once in awhile to encourage growth.",
+				"Let the soil dry between waterings."
+			],
+			"toxic": true
+		},
+		{
+			"name": "spider plant",
+			"water_min": 5,
+			"water_max": 10,
+			"notes": [
+				"Needs lots of bright indirect light",
+				"Let the soil dry between waterings."
+			],
+			"toxic": true
+		},
+		{
+			"name": "calathea",
+			"water_min": 5,
+			"water_max": 10,
+			"notes": [
+				"Prefers warmer and humid climates.",
+				"Avoid direct sunlight."
+			],
+			"toxic": false
+		},
+		{
+			"name": "snake plant",
+			"water_min": 10,
+			"water_max": 15,
+			"notes": [
+				"Let the soil dry completely between waterings.",
+				"Prefers warmer temperatures."
+			],
+			"toxic": true
+		},
+		{
+			"name": "citrus tree",
+			"water_min": 5,
+			"water_max": 10,
+			"notes": [
+				"Clean to avoid dust on leaves.",
+				"Let the soil dry between waterings."
+			],
+			"toxic": true
+		},
+		{
+			"name": "aloe",
+			"water_min": 10,
+			"water_max": 15,
+			"notes": [
+				"Use a mix of soil, perlite, lava rock, chunks of bark.",
+				"Let the soil dry completely between waterings."
+			],
+			"toxic": false
+		},
+		{
+			"name": "orchid",
+			"water_min": 5,
+			"water_max": 10,
+			"notes": [
+				"Airflow should be very light, but present.",
+				"Let the soil dry completely between waterings."
+			],
+			"toxic": false
+		},
+		{
+			"name": "philodendron",
+			"water_min": 5,
+			"water_max": 10,
+			"notes": [
+				"Avoid direct sunlight.",
+				"Give vining types room to roam."
+			],
+			"toxic": true
+		},
+		{
+			"name": "african violet",
+			"water_min": 5,
+			"water_max": 10,
+			"notes": [
+				"Needs lots of bright indirect light",
+				"Water with lukewarm water."
+			],
+			"toxic": false
+		},
+		{
+			"name": "ficus",
+			"water_min": 5,
+			"water_max": 10,
+			"notes": [
+				"Needs lots of bright indirect light",
+				"When the soil is lightly damp, water."
+			],
+			"toxic": true
+		}
+	]
+}
