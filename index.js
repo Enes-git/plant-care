@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 exports.app = app;
 const cookieSession = require('cookie-session');
-const db = require('./db_petition');
+// const db = require('./db_petition');
 const csrf = require('csurf');
 const authRoutes = require('./auth_routes');
 const { requireLoggedInUser } = require('./middleware');
@@ -65,6 +65,11 @@ const plants = [
 app.get('/plants', (req, res) => {
     console.log('hit the get route');
     res.json(plants);
+});
+
+app.post('/upload', (req, res) => {
+    console.log('the post route is on');
+    console.log('req.body :>> ', req.body);
 });
 
 app.listen(8080, () => console.log('index.js running'));

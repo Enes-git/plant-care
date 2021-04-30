@@ -57,10 +57,16 @@
                 <div id="uploader">
                     <form>
                         <input
-                            v-model="name"
+                            v-model="plant_name"
                             type="text"
                             name="name"
                             placeholder="plant name"
+                        />
+                        <input
+                            v-model="plant_type"
+                            type="text"
+                            name="type"
+                            placeholder="plant type"
                         />
                         <input
                             v-model="description"
@@ -68,8 +74,13 @@
                             name="description"
                             placeholder="description"
                         />
-                        <input type="file" name="file" accept="image/*" />
-                        <button @click="handleClick">Upload</button>
+                        <input
+                            @change="handleChange"
+                            type="file"
+                            name="file"
+                            accept="image/*"
+                        />
+                        <button @click.prevent="handleClick">Upload</button>
                     </form>
                 </div>
                 <div class="my-plants grid">
